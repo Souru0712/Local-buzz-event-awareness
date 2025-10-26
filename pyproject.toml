@@ -1,0 +1,25 @@
+# 1. PYLINT CONFIGURATION (Standard and correct way)
+[tool.pylint.BASIC]
+variable-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+argument-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+function-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+const-name-regexp = "[A-Z_][A-Z0-9_]{1,}$"
+class-name-regexp = "[A-Z][a-zA-Z0-9]{1,}$"
+
+
+# 2. PYCODESTYLE/FLAKE8 CONFIGURATION (Fallback/Compatibility)
+# Pylint often reads these sections for C0103 (invalid-name) checks.
+[flake8]
+variable-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+argument-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+function-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+const-name-regexp = "[A-Z_][A-Z0-9_]{1,}$"
+class-name-regexp = "[A-Z][a-zA-Z0-9]{1,}$"
+
+
+[pycodestyle]
+variable-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+argument-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+function-name-regexp = "[a-z_][a-z0-9_]{1,}$"
+const-name-regexp = "[A-Z_][A-Z0-9_]{1,}$"
+class-name-regexp = "[A-Z][a-zA-Z0-9]{1,}$"
