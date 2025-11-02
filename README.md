@@ -9,3 +9,4 @@ The major tools being used:
 - PostgreSQL for storing curated data
 - Superset for visualization
 
+![project flowchart](ProjectFlowchart.jpeg)
