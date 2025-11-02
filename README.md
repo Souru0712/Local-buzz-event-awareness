@@ -8,5 +8,7 @@ The major tools being used:
 - Spark for distributed transformation
 - PostgreSQL for storing curated data
 - Superset for visualization
+- Airflow for scheduling tasks
+- Docker for maintaining Airflow services
 
-![project flowchart](ProjectFlowchart.jpeg)
+![project flowchart](Project_Flowchart.jpeg)
