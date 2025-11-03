@@ -15,6 +15,4 @@ The major tools being used:
 ## Data Flow Description
 The data comes from New York City's Department of Transportation public API, which is then collected and stored inside five S3 buckets, each representing a borough. Pyspark is used to <> <> <> which is then loaded into PostgreSQL for querying
 
-# System Architecture and Data Flow
-
 # Setup and Execution
