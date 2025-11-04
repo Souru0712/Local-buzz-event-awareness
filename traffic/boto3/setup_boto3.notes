@@ -1,0 +1,37 @@
+In AWS:
+    Create Users (admin)
+    Create S3 Role and fix its Trust Relationship to include users
+    Create a policy that adds permission to the role
+
+In CLI:
+    Create profile and input credentials
+        aws configure --profile oscar-admin
+        aws sts get-caller-identity --profile oscar-admin
+    For creating session
+        aws sts assume-role --role-arn arn:aws:iam::042844421190:role/S3WriterRole --role-session-name s3-simulation --profile oscar-admin
+-------------------------------------------------------------------------
+In Bash:
+    Commit to the environment
+        export AWS_ACCESS_KEY_ID="ASIA..."
+        export AWS_SECRET_ACCESS_KEY="abc..."
+        export AWS_SESSION_TOKEN="FwoGZX..."
+        export AWS_REGION="us-east-2"
+
+    For verification:
+        aws sts get-caller-identity
+
+Automate commands:
+    I use Git Bash and jq package to serialize the JSON output
+
+    download the jq package
+        https://github.com/jqlang/jq/releases/latest/download/jq-win64.exe
+
+    rename the download to "jq"
+        save it inside the /Program Files/Git/usr/bin
+
+    Make the .sh file executable
+        chmod +x setup_boto3.sh
+
+    Run the .sh file (source allows the output to be cached within the same bash instance
+    which can be referenced later for loading into the environment)
+        source ./setup_boto3.sh
